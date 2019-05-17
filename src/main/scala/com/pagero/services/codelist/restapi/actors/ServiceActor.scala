@@ -30,8 +30,8 @@ trait ServiceActor extends StaticmappingResponseConverter {
   implicit val TIMEOUT = Timeout(5 seconds)
 
   def route(staticmappingClient: ServiceClient)(implicit context: MessageContext): Route = {
-    pathPrefix(pm = "api" / "v1") {
-      /*path(pm = "codelists") {
+    pathPrefix(pm = "api" / "v1"/"codelists") {
+      path(pm = "tp") {
         get {
           val requestActor = system.actorOf(RequestActor.props(staticmappingClient))
           val request = StaticMappingRequest("bhagya")
@@ -40,7 +40,7 @@ trait ServiceActor extends StaticmappingResponseConverter {
               complete(StatusCodes.OK -> successfulResult)
           }
         }
-      }  ~*/
+      } ~
       path(pm = "codelists") {
         post {
           entity(as[CodelistInfo]) { codelistInfo =>

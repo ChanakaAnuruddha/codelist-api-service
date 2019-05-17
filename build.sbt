@@ -3,7 +3,7 @@ name := "codelist-api-service"
 
 description := "The APIs to use upload, download codelists"
 
-version := "0.1"
+version := "0.2"
 
 scalaVersion := "2.11.8"
 

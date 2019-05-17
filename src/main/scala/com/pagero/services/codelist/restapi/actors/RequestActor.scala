@@ -4,8 +4,8 @@ import akka.actor.{Actor, Props}
 import akka.event.slf4j.SLF4JLogging
 import com.pagero.servicecomm.ServiceClient
 import com.pagero.servicecomm.context.MessageContext
-//import com.pagero.services.codelist.model.StaticMappingRequest
-import com.pagero.services.staticmapping.spec.{CodelistSaveRequest, StaticMappingResponse, StaticMappingRequest}
+import com.pagero.services.codelist.model.StaticMappingRequest
+import com.pagero.services.staticmapping.spec.{CodelistSaveRequest, StaticMappingResponse}
 
 import scala.concurrent.Await
 import scala.concurrent.duration._
